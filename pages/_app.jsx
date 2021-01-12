@@ -1,3 +1,6 @@
+// Global Styles
+import '../src/styles/global.css'
+
 // Contexts
 import { AppProvider } from '../src/contexts/AppContext'
 
