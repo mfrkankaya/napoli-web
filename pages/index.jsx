@@ -1,10 +1,12 @@
-import styled from 'styled-components'
+import React from 'react'
+import { Layout } from '../src/components/common'
 
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`
-
-export default function Home() {
-  return <Title>My page</Title>
+const Home = () => {
+  return (
+    <Layout>
+      
+    </Layout>
+  )
 }
+
+export default Home
