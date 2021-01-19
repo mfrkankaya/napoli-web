@@ -12,6 +12,11 @@ export const Layout = ({ children, title, description, keywords }) => {
         <meta http-equiv='Content-Type' content='text/html;charset=UTF-8' />
         <meta name='description' content={description} />
         <meta name='keywords' content={keywords} />
+        <link rel='preconnect' href='https://fonts.gstatic.com' />
+        <link
+          href='https://fonts.googleapis.com/css2?family=Merriweather&family=Oswald:wght@700&family=Potta+One&display=swap'
+          rel='stylesheet'
+        />
         <title>{title}</title>
       </Head>
 
