@@ -9,12 +9,12 @@ export const Layout = ({ children, title, description, keywords }) => {
   return (
     <Fragment>
       <Head>
-        <meta http-equiv='Content-Type' content='text/html;charset=UTF-8' />
+        <meta httpEquiv='Content-Type' content='text/html;charset=UTF-8' />
         <meta name='description' content={description} />
         <meta name='keywords' content={keywords} />
         <link rel='preconnect' href='https://fonts.gstatic.com' />
         <link
-          href='https://fonts.googleapis.com/css2?family=Merriweather&family=Oswald:wght@700&family=Potta+One&display=swap'
+          href='https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Oswald:wght@700&family=Potta+One&display=swap'
           rel='stylesheet'
         />
         <title>{title}</title>
@@ -22,7 +22,7 @@ export const Layout = ({ children, title, description, keywords }) => {
 
       <Header />
 
-      <Box as='main' minHeight='100vh' width='100vw' paddingTop='4rem'>
+      <Box as='main' minHeight='100vh' width='100vw' paddingTop='6rem'>
         {children}
       </Box>
     </Fragment>

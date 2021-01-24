@@ -1,5 +1,6 @@
 // Global Styles
 import '../src/styles/global.css'
+import 'swiper/swiper.min.css'
 
 // Contexts
 import { AppProvider } from '../src/contexts/AppContext'

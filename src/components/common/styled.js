@@ -1,14 +1,19 @@
 import styled, { css } from 'styled-components'
 import {
-  Box,
+  Box as RBox,
   Flex,
   Text as RText,
   Button as RButton,
   Card,
   Image
 } from 'rebass'
-import { switchProp } from 'styled-tools'
+import { layout, color, typography, space } from 'styled-system'
 
+export const Box = styled(RBox)`
+  ${layout}
+  ${color}
+  ${space}
+`
 export const Container = styled(Box).attrs({ margin: '0 auto' })`
   max-width: 80rem;
   padding: 0 1.5rem;
@@ -36,4 +41,6 @@ export const Text = styled(RText)`
     css`
       font-family: 'Merriweather', serif;
     `}
+
+  ${color}${typography}
 `

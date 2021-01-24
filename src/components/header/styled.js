@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 
 export const HeaderWrapper = styled(Box).attrs({ as: 'header' })`
   width: 100vw;
-  height: 4rem;
+  height: 6rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -11,6 +11,6 @@ export const HeaderWrapper = styled(Box).attrs({ as: 'header' })`
   z-index: 10;
 
   ${({ theme: { colors } }) => css`
-    background-color: ${colors.background[0]};
+    background-color: ${colors.primary};
   `}
 `
