@@ -52,7 +52,7 @@ export const Product = ({
             {name}
           </Text>
 
-          <Text oswald fontSize='0.875rem' opacity='0.75'>
+          <Text sans fontSize='0.875rem' fontWeight='bold' opacity='0.75'>
             {price} ₺
           </Text>
         </Flex>

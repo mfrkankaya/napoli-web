@@ -13,7 +13,7 @@ const Header = () => {
       </Container>
       <Box width='100%' backgroundColor='#111'>
         <Container height='2rem' display='flex' alignItems='center'>
-          <Text oswald fontSize='1.25rem' color='primary'>
+          <Text sans fontSize='1.25rem' color='primary' fontWeight='bold'>
             0212 553 58 11
           </Text>
         </Container>

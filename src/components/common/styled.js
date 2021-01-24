@@ -24,10 +24,10 @@ export const Text = styled(RText)`
     color: ${colors.text[prio]};
   `}
 
-  ${({ oswald }) =>
-    oswald &&
+  ${({ sans }) =>
+    sans &&
     css`
-      font-family: 'Oswald', sans-serif;
+      font-family: sans-serif;
     `}
   
   ${({ merriweather }) =>
