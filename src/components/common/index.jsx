@@ -18,11 +18,25 @@ export const Layout = ({ children, title, description, keywords }) => {
         <meta httpEquiv='Content-Type' content='text/html;charset=UTF-8' />
         <meta name='description' content={description} />
         <meta name='keywords' content={keywords} />
-        <link rel='preconnect' href='https://fonts.gstatic.com' />
+        <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
         <link
+          rel='preload'
+          as='style'
           href='https://fonts.googleapis.com/css2?family=Merriweather:wght@400;900'
-          rel='stylesheet'
         />
+        <link
+          rel='stylesheet'
+          media='print'
+          onload="this.onload=null;this.removeAttribute('media');"
+          href='https://fonts.googleapis.com/css2?family=Merriweather:wght@400;900'
+        />
+        <noscript>
+          <link
+            rel='stylesheet'
+            href='https://fonts.googleapis.com/css2?family=Merriweather:wght@400;900'
+          />
+        </noscript>
+
         <title>{title}</title>
         <link rel='manifest' href='/manifest.json' />
         {/* <link
