@@ -24,12 +24,6 @@ export const Text = styled(RText)`
     color: ${colors.text[prio]};
   `}
 
-  ${({ potta }) =>
-    potta &&
-    css`
-      font-family: 'Potta One', cursive;
-    `}
-
   ${({ oswald }) =>
     oswald &&
     css`

@@ -41,12 +41,12 @@ const Home = ({
       <Welcome />
 
       <Container>
-        <Text potta mb={3} fontSize='2rem'>En Popüler Pizzalar</Text>
+        <Text mb={3} fontSize='2rem' fontWeight='900'>En Popüler Pizzalar</Text>
         <Products products={popularPizzas} priceType={'1'} />
       </Container>
       <Box mb={5} />
       <Container>
-        <Text potta mb={3} fontSize='2rem'>En Popüler Menüler</Text>
+        <Text mb={3} fontSize='2rem' fontWeight='900'>En Popüler Menüler</Text>
         <Products products={popularMenus} priceType={'1'} />
       </Container>
       <Box width='100%' py={5} my={5}>

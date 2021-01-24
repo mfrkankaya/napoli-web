@@ -20,7 +20,7 @@ export const Layout = ({ children, title, description, keywords }) => {
         <meta name='keywords' content={keywords} />
         <link rel='preconnect' href='https://fonts.gstatic.com' />
         <link
-          href='https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Oswald:wght@700&family=Potta+One&display=swap'
+          href='https://fonts.googleapis.com/css2?family=Merriweather:wght@400;900&family=Oswald:wght@700'
           rel='stylesheet'
         />
         <title>{title}</title>

@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <Container height='4rem' display='flex' alignItems='center'>
-        <Text as='h1' potta color='#111'>
+        <Text as='h1' color='#111'>
           Napoli Pizza
         </Text>
       </Container>

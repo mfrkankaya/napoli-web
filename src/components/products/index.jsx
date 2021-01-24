@@ -48,7 +48,7 @@ export const Product = ({
         <ProductImage src={image.url} alt={name} />
         <ProductImagePlaceHolder />
         <Flex justifyContent='space-between' mt={3}>
-          <Text potta color='primary'>
+          <Text color='primary' fontWeight='900'>
             {name}
           </Text>
 
