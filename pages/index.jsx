@@ -125,7 +125,7 @@ const Home = ({
 
 export default Home
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   try {
     const { data: products } = await axios.get('products')
     const { pizzas, menus, salads, drinks, fastfoods } = separateProducts(
