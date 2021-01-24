@@ -45,7 +45,14 @@ export const Product = ({
   return (
     <Link href='/fadfad'>
       <ProductWrapper>
-        <ProductImage src={image.url} alt={name} />
+        <picture>
+          <source
+            srcSet={image.url.replace('.jpg', '.webp')}
+            type='image/webp'
+          />
+          <source srcSet={image.url} type='image/jpeg' />
+          <ProductImage src={image.url} alt={name} />
+        </picture>
         <ProductImagePlaceHolder />
         <Flex justifyContent='space-between' mt={3}>
           <Text color='primary' fontWeight='900'>
