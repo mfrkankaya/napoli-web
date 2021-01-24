@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import { Box, Text } from '../common'
 
 export const WelcomeWrapper = styled(Box)`
-  background-image: url('/img/pizzabg.jpg');
+  background-image: url('/img/pizzabg.webp');
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
