@@ -45,7 +45,7 @@ export const Product = ({
   return (
     <Link href='/fadfad'>
       <ProductWrapper>
-        <ProductImage src={image.url} />
+        <ProductImage src={image.url} alt={name} />
         <ProductImagePlaceHolder />
         <Flex justifyContent='space-between' mt={3}>
           <Text potta color='primary'>
