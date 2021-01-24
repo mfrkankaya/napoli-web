@@ -22,7 +22,7 @@ export const Layout = ({ children, title, description, keywords }) => {
 
       <Header />
 
-      <Box as='main' minHeight='100vh' width='100vw' paddingTop='6rem'>
+      <Box as='main' minHeight='100vh' width='100vw' paddingTop='6rem' pb={4}>
         {children}
       </Box>
     </Fragment>

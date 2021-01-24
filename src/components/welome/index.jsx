@@ -5,13 +5,12 @@ import {
   WelcomeWrapper,
   Mask,
   WelcomeTitle,
-  WelcomeSubTitle,
   CTAButton
 } from './styled'
 
 const Welcome = () => {
   const moveToPizzas = () => {
-    window.scrollTo({ top: 500, behavior: 'smooth' })
+    window.scrollTo({ top: document.getElementById('products').getBoundingClientRect().top - 250, behavior: 'smooth' })
   }
 
   return (
@@ -19,9 +18,9 @@ const Welcome = () => {
       <Mask>
         <Container height='100%'>
           <Flex flexDirection='column' justifyContent='center' height='100%'>
-            <WelcomeTitle>Napoli Pizza'ya Hoşgeldiniz.</WelcomeTitle>
+            <WelcomeTitle>Napoli Pizza'ya Hoşgeldin.</WelcomeTitle>
             <CTAButton onClick={moveToPizzas} mt={5}>
-              Hemen Pizzanızı Seçin
+              Pizzanı seçmek için tıkla
             </CTAButton>
           </Flex>
         </Container>
