@@ -1,12 +1,12 @@
 {
+  "name": "17 Napoli Pizza",
+  "short_name": "Napoli Pizza",
   "theme_color": "#fdd835",
   "background_color": "#111111",
   "display": "fullscreen",
+  "orientation": "portrait",
   "scope": "/",
   "start_url": "/",
-  "app_name": "17 Napoli Pizza",
-  "short_name": "Napoli Pizza",
-  "description": "17 Napoli Pizza \u00c7anakkale",
   "icons": [
     {
       "src": "icons/icon-192x192.png",
@@ -28,5 +28,6 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
+  ],
+  "splash_pages": null
 }
