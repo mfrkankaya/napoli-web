@@ -9,6 +9,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "next": "latest",
+    "next-pwa": "^5.0.4",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-is": "^16.8.0",
