@@ -17,25 +17,29 @@ export const ProudctsGridView = styled(Box)`
   }
 
   @media (max-width: 576px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 375px) {
     grid-template-columns: repeat(1, 1fr);
   }
 `
 
 export const ProductImagePlaceHolder = styled(Box)`
-  position: absolute;
-  width: calc(100% - 2rem);
+  width: 100%;
   background: #111;
+  box-shadow: 0 0.5rem 1rem -0.25rem #0005;
   z-index: 0;
-  top: 1rem;
-  left: 1rem;
-  padding-top: calc(100% - 2rem);
+  padding-top: 100%;
   border-radius: 0.5rem;
 `
 export const ProductImage = styled(Image)`
-  width: 100%;
+  position: absolute;
+  width: calc(100% - 2rem);
+  top: 1rem;
+  left: 1rem;
   border-radius: 0.5rem;
   opacity: 0.75;
-  box-shadow: 0 0.5rem 1rem -0.25rem #0005;
   z-index: 1;
 `
 
