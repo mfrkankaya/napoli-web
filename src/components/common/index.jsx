@@ -2,6 +2,7 @@ import { Fragment } from 'react'
 import Head from 'next/head'
 import { Box } from 'rebass'
 import Header from '../header'
+import Footer from '../footer'
 
 export * from './styled'
 
@@ -19,6 +20,7 @@ export const Layout = ({ children, title, description, keywords }) => {
       <Box as='main' minHeight='100vh' width='100vw' paddingTop='6rem' pb={4}>
         {children}
       </Box>
+      <Footer />
     </Fragment>
   )
 }
