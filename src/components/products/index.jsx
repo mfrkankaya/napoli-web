@@ -47,7 +47,7 @@ export const Product = ({
       <ProductWrapper>
         <picture>
           <source
-            srcSet={image.url.replace('.jpg', '.webp')}
+            srcSet={image.url.replace(/.jpg|.png|.jpeg/, '.webp')}
             type='image/webp'
           />
           <source srcSet={image.url} type='image/jpeg' />
