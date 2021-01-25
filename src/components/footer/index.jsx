@@ -1,7 +1,6 @@
 import React from 'react'
 import { Flex } from 'rebass'
-import { CustomSvg } from '../../svgs'
-import { Container, Text, Box } from '../common'
+import { Container, Text } from '../common'
 import { FooterBrand, FooterWrapper, SocialIcon } from './styled'
 
 const Footer = () => {

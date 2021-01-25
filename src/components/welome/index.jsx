@@ -1,6 +1,6 @@
 import React from 'react'
 import { Flex } from 'rebass'
-import { Container, Text } from '../common'
+import { Container } from '../common'
 import {
   WelcomeWrapper,
   Mask,
