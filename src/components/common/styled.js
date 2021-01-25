@@ -16,7 +16,11 @@ export const Box = styled(RBox)`
 `
 export const Container = styled(Box).attrs({ margin: '0 auto' })`
   max-width: 80rem;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
+
+  @media (max-width: 576px){
+    padding: 0 1rem;
+  }
 `
 
 export const Text = styled(RText)`
