@@ -2,7 +2,9 @@ import {
   ProductWrapper,
   ProudctsGridView,
   ProductImage,
-  ProductImagePlaceHolder
+  ProductImagePlaceHolder,
+  ProductPrice,
+  ProductName
 } from './styled'
 import Link from 'next/link'
 import { Text } from '../common'
@@ -55,13 +57,8 @@ export const Product = ({
         </picture>
         <ProductImagePlaceHolder />
         <Flex justifyContent='space-between' mt={3}>
-          <Text color='primary' fontWeight='900'>
-            {name}
-          </Text>
-
-          <Text sans fontSize='0.875rem' fontWeight='bold' opacity='0.75'>
-            {price} ₺
-          </Text>
+          <ProductName>{name}</ProductName>
+          <ProductPrice sans>{price} ₺</ProductPrice>
         </Flex>
       </ProductWrapper>
     </Link>

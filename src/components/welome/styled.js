@@ -60,6 +60,7 @@ export const CTAButton = styled.button`
     @media (max-width: 576px){
       width: 100%;
       font-size: 1.15rem;
+      padding: 1rem 0.5rem;
     }
 
     &:hover{

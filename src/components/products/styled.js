@@ -1,29 +1,6 @@
-import { Button, Image } from 'rebass'
+import { Image } from 'rebass'
 import styled, { css } from 'styled-components'
-import { Box } from '../common'
-
-export const ProudctsGridView = styled(Box)`
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-
-  @media (max-width: 992px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: 576px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: 375px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
-`
+import { Box, Text } from '../common'
 
 export const ProductImagePlaceHolder = styled(Box)`
   width: 100%;
@@ -52,6 +29,23 @@ export const PricesWrapper = styled(Box)`
     display: flex;
     justify-content: flex-end;
   }
+`
+
+export const ProductName = styled(Text)`
+  ${({
+    theme: {
+      colors: { primary }
+    }
+  }) => css`
+    color: ${primary} !important;
+    font-weight: 900;
+  `}
+`
+
+export const ProductPrice = styled(Text)`
+  font-weight: bold;
+  font-size: 0.875rem;
+  opacity: 0.75rem;
 `
 
 export const ProductWrapper = styled.a`
@@ -112,4 +106,41 @@ export const CheckButton = styled.button`
       font-size: 0.875rem !important;
     `}
   `}
+`
+
+export const ProudctsGridView = styled(Box)`
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 576px) {
+    grid-template-columns: repeat(2, 1fr);
+
+    ${ProductName}{
+      font-size: 0.875rem;
+    }
+  }
+
+  @media (max-width: 375px) {
+    gap: 0.5rem;
+
+    ${ProductWrapper} {
+      padding: 0.5rem;
+    }
+
+    ${ProductImage} {
+      width: calc(100% - 1rem);
+      top: 0.5rem;
+      left: 0.5rem;
+    }
+  }
 `
