@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components'
 import { color } from 'styled-system'
 import { CustomSvg } from '../../svgs'
-import { Text } from '../common'
 
 export const FooterWrapper = styled.footer`
   width: 100vw;
