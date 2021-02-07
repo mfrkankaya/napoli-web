@@ -18,3 +18,10 @@ export const HeaderWrapper = styled(Box).attrs({ as: 'header' })`
 export const Logo = styled(Image)`
   width: 3rem;
 `
+
+export const NavlinkStyled = styled.a`
+  color: #222;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0 0.5rem;
+`

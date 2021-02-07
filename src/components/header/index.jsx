@@ -2,8 +2,16 @@ import React from 'react'
 import { Box, Flex } from 'rebass'
 import { CustomSvg } from '../../svgs'
 import { Container, Text } from '../common'
-import { HeaderWrapper, Logo } from './styled'
+import { HeaderWrapper, Logo, NavlinkStyled } from './styled'
 import { colors } from '../../theme'
+import Link from 'next/link'
+import { navlinks } from '../../data'
+
+const Navlink = ({ label, ...props }) => (
+  <Link {...props}>
+    <NavlinkStyled>{label}</NavlinkStyled>
+  </Link>
+)
 
 const Header = () => {
   return (
@@ -11,9 +19,19 @@ const Header = () => {
       <Container height='4rem' display='flex' alignItems='center'>
         <Logo src='icons/pizza.png' alt='Çanakkale Pizza Logo' />
         <Box ml={3} />
-        <Text as='h1' color='#111'>
-          Napoli Pizza
-        </Text>
+        <Link href='/'>
+          <a>
+            <Text as='h1' color='#111'>
+              Napoli Pizza
+            </Text>
+          </a>
+        </Link>
+
+        <Flex ml={4}>
+          {navlinks.map(navlink => (
+            <Navlink key={navlink.href} {...navlink} />
+          ))}
+        </Flex>
       </Container>
       <Box width='100%' backgroundColor='#111'>
         <Container height='2rem' display='flex' alignItems='center'>
