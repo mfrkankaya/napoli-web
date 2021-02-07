@@ -27,7 +27,7 @@ const Navlink = ({ label, isDropdown, dropdownList, ...props }) => {
       <NavlinkStyled>{label}</NavlinkStyled>
       <DropdownList>
         {dropdownList.map(({ label, href }) => (
-          <Link key={href} href={href}>
+          <Link key={`dropdown${href}`} href={href}>
             <NavlinkStyled>{label}</NavlinkStyled>
           </Link>
         ))}
