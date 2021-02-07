@@ -35,3 +35,10 @@ export const Text = styled(RText)`
 
   ${color}${typography}
 `
+
+export const WhatsappWrapper = styled.a`
+  position: fixed;
+  bottom: 2rem;
+  right: 1rem;
+  z-index: 100;
+`

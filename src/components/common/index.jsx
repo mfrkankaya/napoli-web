@@ -1,8 +1,9 @@
 import { Fragment } from 'react'
 import Head from 'next/head'
-import { Box } from 'rebass'
+import { Box, Image } from 'rebass'
 import Header from '../header'
 import Footer from '../footer'
+import { WhatsappWrapper } from './styled'
 
 export * from './styled'
 
@@ -21,6 +22,9 @@ export const Layout = ({ children, title, description, keywords }) => {
         {children}
       </Box>
       <Footer />
+      <WhatsappWrapper href='whatsapp://send?abid=05312592685?text=Merhaba,%20sipariş%20vermek%20istiyorum.'>
+        <Image src='img/whatsapp.png' loading='lazy' width={48} />
+      </WhatsappWrapper>
     </Fragment>
   )
 }
