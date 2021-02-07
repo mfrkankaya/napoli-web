@@ -1,7 +1,7 @@
 import React from 'react'
 import { Flex } from 'rebass'
 import { CustomSvg } from '../../svgs'
-import { Box, Text } from '../common'
+import { Text } from '../common'
 import { PropositionsGridView, PropositionWrapper } from './styled'
 
 const PropositionItem = ({ icon, title, text, ...props }) => (

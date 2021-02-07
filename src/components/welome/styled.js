@@ -1,4 +1,3 @@
-import { Button } from 'rebass'
 import styled, { css } from 'styled-components'
 import { Box, Text } from '../common'
 

@@ -1,12 +1,5 @@
 import styled, { css } from 'styled-components'
-import {
-  Box as RBox,
-  Flex,
-  Text as RText,
-  Button as RButton,
-  Card,
-  Image
-} from 'rebass'
+import { Box as RBox, Text as RText } from 'rebass'
 import { layout, color, typography, space } from 'styled-system'
 
 export const Box = styled(RBox)`
@@ -18,7 +11,7 @@ export const Container = styled(Box).attrs({ margin: '0 auto' })`
   max-width: 80rem;
   padding: 0 2rem;
 
-  @media (max-width: 576px){
+  @media (max-width: 576px) {
     padding: 0 1rem;
   }
 `

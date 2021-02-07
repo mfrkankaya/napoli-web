@@ -7,7 +7,6 @@ import {
   ProductName
 } from './styled'
 import Link from 'next/link'
-import { Text } from '../common'
 import { Flex } from 'rebass'
 
 const getPrice = ({

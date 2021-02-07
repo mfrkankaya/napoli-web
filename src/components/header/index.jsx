@@ -4,7 +4,6 @@ import { CustomSvg } from '../../svgs'
 import { Container, Text } from '../common'
 import { HeaderWrapper, Logo } from './styled'
 import { colors } from '../../theme'
-import { color } from 'styled-system'
 
 const Header = () => {
   return (
