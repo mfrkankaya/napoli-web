@@ -6,7 +6,7 @@ import { axios, separateProducts } from '../src/utils'
 
 const Pizzalar = ({ salads }) => {
   return (
-    <Layout>
+    <Layout title='Çanakkale Napoli Pizza - En uygun ve lezzetli salatalar.'>
       <Welcome
         text='Salatalar'
         ctaText='Salatanı seçmek için tıkla'
