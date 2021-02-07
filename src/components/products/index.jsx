@@ -53,7 +53,7 @@ export const Product = ({
             type='image/webp'
           />
           <source srcSet={image.url} type='image/jpeg' />
-          <ProductImage src={image.url} alt={name} />
+          <ProductImage src={image.url} alt={name} loading='lazy' />
         </picture>
         <ProductImagePlaceHolder />
         <Flex justifyContent='space-between' mt={3}>

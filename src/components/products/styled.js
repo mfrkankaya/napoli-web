@@ -10,7 +10,7 @@ export const ProductImagePlaceHolder = styled(Box)`
   padding-top: 100%;
   border-radius: 0.5rem;
 `
-export const ProductImage = styled(Image)`
+export const ProductImage = styled.img`
   position: absolute;
   width: calc(100% - 2rem);
   top: 1rem;
