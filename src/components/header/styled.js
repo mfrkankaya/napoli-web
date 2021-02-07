@@ -114,6 +114,11 @@ export const MenuButton = styled(Flex)`
   top: 1rem;
   width: 2rem;
   height: 2rem;
+  display: none !important;
+
+  @media (max-width: 768px) {
+    display: flex !important;
+  }
 
   ${({ active }) =>
     active &&
