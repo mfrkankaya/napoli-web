@@ -22,7 +22,7 @@ export const Layout = ({ children, title, description, keywords }) => {
         {children}
       </Box>
       <Footer />
-      <WhatsappWrapper href='whatsapp://send?abid=05312592685?text=Merhaba,%20sipariş%20vermek%20istiyorum.'>
+      <WhatsappWrapper href='https://wa.me/905312833131?text=İyi%20günler,%20sipariş%20vermek%20istiyorum.'>
         <Image src='img/whatsapp.png' loading='lazy' width={48} />
       </WhatsappWrapper>
     </Fragment>
