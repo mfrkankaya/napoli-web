@@ -34,7 +34,10 @@ export default function App({ Component, pageProps }) {
         <link
           rel='stylesheet'
           media='print'
-          onLoad="this.onload=null;this.removeAttribute('media');"
+          onLoad={e => {
+            e.target.onload = null
+            e.target.removeAttribute('media')
+          }}
           href='https://fonts.googleapis.com/css2?family=Merriweather:wght@400;900'
         />
         <noscript>
