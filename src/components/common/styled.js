@@ -37,8 +37,13 @@ export const Text = styled(RText)`
 `
 
 export const WhatsappWrapper = styled.a`
+  display: none;
   position: fixed;
   bottom: 2rem;
   right: 1rem;
   z-index: 100;
+
+  @media (max-width: 576px) {
+    display: unset;
+  }
 `
