@@ -55,16 +55,22 @@ export const CTAButton = styled.button`
     font-weight: bold;
     margin-top: 3rem;
     transition: 0.2s ease-in-out;
-  
-    @media (max-width: 576px){
+
+    @media (max-width: 576px) {
       width: 100%;
       font-size: 1.15rem;
       padding: 1rem 0.5rem;
     }
 
-    &:hover{
+    &:hover {
       background: ${primary};
       color: #111;
     }
+
+    ${({ smallSpace }) =>
+      smallSpace &&
+      css`
+        margin-top: 1.5rem;
+      `}
   `}
 `

@@ -46,7 +46,7 @@ const Header = () => {
   const closeMenu = () => setMenuActive(false)
 
   const mapLinks = navlinks.map(navlink => (
-    <Navlink key={navlink.href} {...navlink} closeMenu={closeMenu} />
+    <Navlink key={navlink.label} {...navlink} closeMenu={closeMenu} />
   ))
 
   return (

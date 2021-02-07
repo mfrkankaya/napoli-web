@@ -11,7 +11,12 @@ const Pizzalar = ({ pizzas, popularPizzas }) => {
 
   return (
     <Layout>
-      <Welcome text='Pizzalar' ctaText='Pizzanı seçmek için tıkla' />
+      <Welcome
+        text='Pizzalar'
+        ctaText='Pizzanı seçmek için tıkla'
+        centered
+        smallSpace
+      />
 
       <Container>
         <Text mb={3} fontSize='2rem' fontWeight='900'>

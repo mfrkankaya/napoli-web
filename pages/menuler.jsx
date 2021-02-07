@@ -7,7 +7,12 @@ import { axios, separateProducts } from '../src/utils'
 const Pizzalar = ({ menus, popularMenus }) => {
   return (
     <Layout>
-      <Welcome text='Menüler' ctaText='Menünü seçmek için tıkla' />
+      <Welcome
+        text='Menüler'
+        ctaText='Menünü seçmek için tıkla'
+        centered
+        smallSpace
+      />
 
       <Container>
         <Text mb={3} fontSize='2rem' fontWeight='900'>
