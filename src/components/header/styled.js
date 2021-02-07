@@ -1,4 +1,4 @@
-import { Box, Image } from 'rebass'
+import { Box, Image, Flex } from 'rebass'
 import styled, { css } from 'styled-components'
 
 export const HeaderWrapper = styled(Box).attrs({ as: 'header' })`
@@ -66,5 +66,94 @@ export const DropdownWrapper = styled(Box)`
     pointer-events: all;
     opacity: 1;
     transform: translateY(0);
+  }
+`
+
+export const DesktopNavs = styled(Flex)`
+  @media (max-width: 768px) {
+    display: none !important;
+  }
+`
+
+export const MenuButtonStick = styled.span`
+  display: block;
+  width: 100%;
+  height: 0.25rem;
+  background: #111;
+  border-radius: 1rem;
+  margin: 0.2rem 0;
+  transition: 0.4s ease-in-out;
+`
+
+export const MenuButton = styled(Flex)`
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  right: 1rem;
+  top: 1rem;
+  width: 2rem;
+  height: 2rem;
+
+  ${({ active }) =>
+    active &&
+    css`
+      ${MenuButtonStick}  {
+        margin: 0;
+
+        &:nth-of-type(1) {
+          transform: rotate(45deg);
+          margin-bottom: -0.25rem;
+        }
+
+        &:nth-of-type(2) {
+          transform: translateX(10rem);
+          opacity: 0;
+        }
+
+        &:nth-of-type(3) {
+          transform: rotate(-45deg);
+          margin-top: -0.25rem;
+        }
+      }
+    `}
+`
+
+export const MobileNavs = styled(Flex)`
+  ${({ theme: { colors } }) => css`
+    background-color: ${colors.primary};
+    flex-direction: column;
+    width: 100vw;
+    height: calc(100vh - 6rem);
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    transform: translateX(100%);
+    transition: 0.4s ease-in-out;
+    z-index: 500;
+    justify-content: center;
+    align-items: center;
+  `}
+
+  ${({ active }) =>
+    active &&
+    css`
+      transform: translateX(0);
+    `}
+
+  ${NavlinkStyled} {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  ${DropdownList} {
+    left: 0;
+    transform: translateX(-10%) !important;
+
+    ${NavlinkStyled} {
+      font-size: 1rem;
+      padding: 1rem;
+      text-align: center;
+    }
   }
 `
