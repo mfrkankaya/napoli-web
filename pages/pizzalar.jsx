@@ -3,8 +3,12 @@ import { Container, Layout, Text, Box } from '../src/components/common'
 import Products from '../src/components/products'
 import Welcome from '../src/components/welome'
 import { axios, separateProducts } from '../src/utils'
+import { useRouter } from 'next/router'
 
 const Pizzalar = ({ pizzas, popularPizzas }) => {
+  const router = useRouter()
+  const { kisi: priceType } = router.query
+
   return (
     <Layout>
       <Welcome text='Pizzalar' ctaText='Pizzanı seçmek için tıkla' />
@@ -13,7 +17,7 @@ const Pizzalar = ({ pizzas, popularPizzas }) => {
         <Text mb={3} fontSize='2rem' fontWeight='900'>
           En Popüler Pizzalar
         </Text>
-        <Products products={popularPizzas} priceType={'1'} />
+        <Products products={popularPizzas} priceType={priceType} />
       </Container>
 
       <Box pt={5} mt={5} />
@@ -22,7 +26,7 @@ const Pizzalar = ({ pizzas, popularPizzas }) => {
         <Text mb={3} fontSize='2rem' fontWeight='900'>
           Tüm Pizzalar
         </Text>
-        <Products id='products' products={pizzas} priceType={'1'} />
+        <Products id='products' products={pizzas} priceType={priceType} />
       </Container>
     </Layout>
   )
@@ -30,7 +34,7 @@ const Pizzalar = ({ pizzas, popularPizzas }) => {
 
 export default Pizzalar
 
-export async function getStaticProps() {
+export async function getStaticProps(ctx) {
   try {
     const { data: products } = await axios.get('products')
     const { pizzas } = separateProducts(products)
