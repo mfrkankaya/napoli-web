@@ -7,7 +7,9 @@ const Welcome = ({ text, ctaText }) => {
   const moveToProducts = () => {
     window.scrollTo({
       top:
-        document.getElementById('products').getBoundingClientRect().top - 250,
+        document.getElementById('products').getBoundingClientRect().top -
+        200 +
+        window.scrollY,
       behavior: 'smooth'
     })
   }
