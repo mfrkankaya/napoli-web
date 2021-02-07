@@ -15,9 +15,7 @@ const Home = ({
   drinks,
   fastfoods,
   popularPizzas,
-  popularMenus,
-  slideImages,
-  error
+  popularMenus
 }) => {
   const [selectedProductTab, setSelectedProductTab] = useState('pizzas')
   const [priceType, setPriceType] = useState('1')
@@ -38,15 +36,22 @@ const Home = ({
 
   return (
     <Layout>
-      <Welcome />
+      <Welcome
+        text="Napoli Pizza'ya Hoşgeldin."
+        ctaText='Pizzanı seçmek için tıkla'
+      />
 
       <Container>
-        <Text mb={3} fontSize='2rem' fontWeight='900'>En Popüler Pizzalar</Text>
+        <Text mb={3} fontSize='2rem' fontWeight='900'>
+          En Popüler Pizzalar
+        </Text>
         <Products products={popularPizzas} priceType={'1'} />
       </Container>
       <Box mb={5} />
       <Container>
-        <Text mb={3} fontSize='2rem' fontWeight='900'>En Popüler Menüler</Text>
+        <Text mb={3} fontSize='2rem' fontWeight='900'>
+          En Popüler Menüler
+        </Text>
         <Products products={popularMenus} priceType={'1'} />
       </Container>
       <Box width='100%' py={5} my={5}>
