@@ -32,9 +32,5 @@ export const navlinks = [
   {
     label: 'Salatalar',
     href: '/salatalar'
-  },
-  {
-    label: 'İçecekler',
-    href: '/icecekler'
   }
 ]

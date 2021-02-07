@@ -82,11 +82,6 @@ const Home = ({
             active={selectedProductTab === 'salads'}>
             Salatalar
           </CheckButton>
-          <CheckButton
-            onClick={tabHandler('drinks')}
-            active={selectedProductTab === 'drinks'}>
-            İçecekler
-          </CheckButton>
         </Flex>
         <Flex
           overflowX='auto'
