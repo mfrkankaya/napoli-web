@@ -18,13 +18,15 @@ const Welcome = ({ text, ctaText, centered, smallSpace }) => {
     <WelcomeWrapper>
       <Mask>
         <Container height='100%'>
-          <Flex flexDirection='column' justifyContent='center' height='100%'>
+          <Flex
+            flexDirection='column'
+            justifyContent='center'
+            height='100%'
+            alignItems={centered ? 'center' : 'flex-start'}>
             <WelcomeTitle textAlign={centered ? 'center' : 'left'}>
               {text}
             </WelcomeTitle>
-            <CTAButton
-              onClick={moveToProducts}
-              smallSpace={smallSpace}>
+            <CTAButton onClick={moveToProducts} smallSpace={smallSpace}>
               {ctaText}
             </CTAButton>
           </Flex>
