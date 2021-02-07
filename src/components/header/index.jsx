@@ -11,7 +11,9 @@ import {
   DesktopNavs,
   MenuButton,
   MenuButtonStick,
-  MobileNavs
+  MobileNavs,
+  BrandSpacer,
+  BrandText
 } from './styled'
 import { colors } from '../../theme'
 import Link from 'next/link'
@@ -54,12 +56,12 @@ const Header = () => {
       <HeaderWrapper>
         <Container height='4rem' display='flex' alignItems='center'>
           <Logo src='icons/pizza.png' alt='Çanakkale Pizza Logo' />
-          <Box ml={3} />
+          <BrandSpacer />
           <Link href='/'>
             <a>
-              <Text as='h1' color='#111'>
+              <BrandText as='h1' color='#111'>
                 Napoli Pizza
-              </Text>
+              </BrandText>
             </a>
           </Link>
 

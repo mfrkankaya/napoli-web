@@ -1,4 +1,4 @@
-import { Box, Image, Flex } from 'rebass'
+import { Box, Image, Flex, Text } from 'rebass'
 import styled, { css } from 'styled-components'
 
 export const HeaderWrapper = styled(Box).attrs({ as: 'header' })`
@@ -17,6 +17,10 @@ export const HeaderWrapper = styled(Box).attrs({ as: 'header' })`
 
 export const Logo = styled(Image)`
   width: 3rem;
+
+  @media (max-width: 325px) {
+    width: 2rem;
+  }
 `
 
 export const NavlinkStyled = styled.a`
@@ -24,6 +28,22 @@ export const NavlinkStyled = styled.a`
   text-decoration: none;
   cursor: pointer;
   margin: 0 0.5rem;
+`
+
+export const BrandSpacer = styled(Box)`
+  margin-left: 1rem !important;
+
+  @media (max-width: 325px) {
+    margin-left: 0.5rem !important;
+  }
+`
+
+export const BrandText = styled(Text)`
+  color: #111;
+
+  @media (max-width: 375px) {
+    font-size: 1.5rem;
+  }
 `
 
 export const DropdownList = styled(Box)`
