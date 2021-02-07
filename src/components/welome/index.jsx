@@ -30,4 +30,5 @@ const Welcome = ({ text, ctaText }) => {
   )
 }
 
+
 export default Welcome
