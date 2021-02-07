@@ -2,16 +2,39 @@ import React from 'react'
 import { Box, Flex } from 'rebass'
 import { CustomSvg } from '../../svgs'
 import { Container, Text } from '../common'
-import { HeaderWrapper, Logo, NavlinkStyled } from './styled'
+import {
+  DropdownList,
+  HeaderWrapper,
+  Logo,
+  NavlinkStyled,
+  DropdownWrapper
+} from './styled'
 import { colors } from '../../theme'
 import Link from 'next/link'
 import { navlinks } from '../../data'
 
-const Navlink = ({ label, ...props }) => (
-  <Link {...props}>
-    <NavlinkStyled>{label}</NavlinkStyled>
-  </Link>
-)
+const Navlink = ({ label, isDropdown, dropdownList, ...props }) => {
+  if (!isDropdown) {
+    return (
+      <Link {...props}>
+        <NavlinkStyled>{label}</NavlinkStyled>
+      </Link>
+    )
+  }
+
+  return (
+    <DropdownWrapper>
+      <NavlinkStyled>{label}</NavlinkStyled>
+      <DropdownList>
+        {dropdownList.map(({ label, href }) => (
+          <Link key={href} href={href}>
+            <NavlinkStyled>{label}</NavlinkStyled>
+          </Link>
+        ))}
+      </DropdownList>
+    </DropdownWrapper>
+  )
+}
 
 const Header = () => {
   return (
