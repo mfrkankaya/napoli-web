@@ -69,18 +69,6 @@ const Header = () => {
               0286 217 7747
             </Text>
           </Flex>
-
-          <Flex alignItems='center' ml={3}>
-            <CustomSvg name='smartphone' fill={colors.primary} />
-            <Text
-              ml={1}
-              sans
-              fontSize='1.25rem'
-              color='primary'
-              fontWeight='bold'>
-              0531 283 3131
-            </Text>
-          </Flex>
         </Container>
       </Box>
     </HeaderWrapper>
