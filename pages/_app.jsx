@@ -46,8 +46,9 @@ export default function App({ Component, pageProps }) {
             href='https://fonts.googleapis.com/css2?family=Merriweather:wght@400;900'
           />
         </noscript>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel='manifest' href='/manifest.json' />
-        {/* <link
+        <link
           href='/icons/icon-192x192.png'
           rel='icon'
           type='image/png'
@@ -58,7 +59,7 @@ export default function App({ Component, pageProps }) {
           rel='icon'
           type='image/png'
           sizes='32x32'
-        /> */}
+        />
         <link rel='apple-touch-icon' href='/iconst/icon-256x256.png' />
         <meta name='theme-color' content='#fdd835' />
       </Head>

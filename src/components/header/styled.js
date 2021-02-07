@@ -1,4 +1,4 @@
-import { Box } from 'rebass'
+import { Box, Image } from 'rebass'
 import styled, { css } from 'styled-components'
 
 export const HeaderWrapper = styled(Box).attrs({ as: 'header' })`
@@ -13,4 +13,8 @@ export const HeaderWrapper = styled(Box).attrs({ as: 'header' })`
   ${({ theme: { colors } }) => css`
     background-color: ${colors.primary};
   `}
+`
+
+export const Logo = styled(Image)`
+  width: 3rem;
 `

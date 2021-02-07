@@ -16,7 +16,7 @@ export const ProductImage = styled.img`
   top: 1rem;
   left: 1rem;
   border-radius: 0.5rem;
-  opacity: 0.75;
+  opacity: 0.85;
   z-index: 1;
 `
 

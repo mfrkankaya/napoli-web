@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Flex } from 'rebass'
 import { CustomSvg } from '../../svgs'
 import { Container, Text } from '../common'
-import { HeaderWrapper } from './styled'
+import { HeaderWrapper, Logo } from './styled'
 import { colors } from '../../theme'
 import { color } from 'styled-system'
 
@@ -10,6 +10,8 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <Container height='4rem' display='flex' alignItems='center'>
+        <Logo src='icons/pizza.png' alt='Çanakkale Pizza Logo' />
+        <Box ml={3} />
         <Text as='h1' color='#111'>
           Napoli Pizza
         </Text>
