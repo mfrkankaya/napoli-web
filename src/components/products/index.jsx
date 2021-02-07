@@ -25,6 +25,7 @@ const getPrice = ({
 }
 
 export const Product = ({
+  slug,
   image,
   name,
   price1,
@@ -44,7 +45,7 @@ export const Product = ({
   })
 
   return (
-    <Link href='/fadfad'>
+    <Link href={`/${slug}`}>
       <ProductWrapper>
         <picture>
           <source
