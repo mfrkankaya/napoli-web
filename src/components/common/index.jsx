@@ -26,7 +26,7 @@ export const Layout = ({ children, title, description, keywords }) => {
 }
 
 Layout.defaultProps = {
-  title: 'Çanakkale Napoli Pizza 17 - En uygun pizzalar.',
+  title: 'Çanakkale Napoli Pizza - En uygun pizzalar.',
   description: "Çanakkale'nin en güzel ve en ucuz pizzacısı.",
   keywords:
     'Pizza,Çanakkale pizza,Ucuz pizza,2 kişilik pizza,Büyük boy pizza,Orta boy pizza,Küçük boy pizza'
