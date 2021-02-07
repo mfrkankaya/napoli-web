@@ -30,10 +30,10 @@ const Footer = () => {
             borderRadius: '1rem',
             opacity: 0.75
           }}
-          frameborder='0'
-          allowfullscreen=''
+          frameBorder='0'
+          allowFullScreen=''
           aria-hidden='false'
-          tabindex='0'
+          tabIndex='0'
         />
 
         <Text
