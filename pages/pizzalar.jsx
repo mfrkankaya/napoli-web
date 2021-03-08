@@ -56,7 +56,6 @@ export async function getStaticProps(ctx) {
       }
     }
   } catch (error) {
-    console.log(error)
     return {
       props: {
         error: true

@@ -10,11 +10,29 @@ export const ProductName = styled(Text)`
 `
 
 export const ProductImage = styled.img`
-  margin-top: 2rem;
-  max-width: 512px;
+  width: 100%;
   border-radius: 1rem;
   opacity: 0.8;
   ${({ theme: { colors } }) => css`
     border: 0.25rem solid ${colors.primary};
+  `}
+`
+
+export const PriceWrapper = styled(Flex)`
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1rem !important;
+`
+
+export const ProductPrice = styled(Text)`
+  ${({ theme: { colors } }) => css`
+    color: ${colors.primary};
+    font-weight: 900;
+    font-size: 2rem;
+    margin-top: 0.5rem !important;
+
+    @media (max-width: 576px) {
+      font-size: 1.5rem;
+    }
   `}
 `

@@ -4,7 +4,7 @@ import Products from '../src/components/products'
 import Welcome from '../src/components/welome'
 import { axios, separateProducts } from '../src/utils'
 
-const Pizzalar = ({ menus, popularMenus }) => {
+const Pizzalar = ({ menus, popularMenus, familyMenus }) => {
   return (
     <Layout title='Çanakkale Napoli Pizza - En uygun ve lezzetli menüler.'>
       <Welcome
@@ -19,6 +19,15 @@ const Pizzalar = ({ menus, popularMenus }) => {
           En Popüler Menüler
         </Text>
         <Products products={popularMenus} />
+      </Container>
+
+      <Box pt={5} mt={5} />
+
+      <Container>
+        <Text mb={3} fontSize='2rem' fontWeight='900'>
+          Aile Menüleri
+        </Text>
+        <Products products={familyMenus} />
       </Container>
 
       <Box pt={5} mt={5} />
@@ -45,14 +54,29 @@ export async function getStaticProps() {
     } = await axios.get('popular-contents')
     const { menus: popularMenus } = separateProducts(popularProducts)
 
+    const familyMenu = menus.find(menu => menu.name === 'Aile Menü')
+    const familyMenus = Array.from({ length: 3 }).map((item, index) => {
+      const priceMap = {
+        0: 3,
+        1: 4,
+        2: 6
+      }
+
+      return {
+        ...familyMenu,
+        name: `${priceMap[index]} Kişilik`,
+        singlePrice: familyMenu[`price${priceMap[index]}`]
+      }
+    })
+
     return {
       props: {
-        menus,
-        popularMenus
+        menus: menus.filter(menu => menu.name !== 'Aile Menü'),
+        popularMenus,
+        familyMenus
       }
     }
   } catch (error) {
-    console.log(error)
     return {
       props: {
         error: true

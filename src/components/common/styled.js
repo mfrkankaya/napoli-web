@@ -21,17 +21,11 @@ export const Text = styled(RText)`
     color: ${colors.text[prio]};
   `}
 
-  ${({ sans }) =>
-    sans &&
-    css`
-      font-family: sans-serif;
-    `}
+  ${({ sans }) => sans && 'font-family: sans-serif;'}
   
-  ${({ merriweather }) =>
-    merriweather &&
-    css`
-      font-family: 'Merriweather', serif;
-    `}
+  ${({ merriweather }) => merriweather && 'font-family: "Merriweather", serif;'}
+  
+  ${({ noWhiteSpace }) => noWhiteSpace && 'white-space: nowrap;'}
 
   ${color}${typography}
 `

@@ -3,24 +3,23 @@ import { Layout } from '../src/components/common'
 import { Product } from '../src/components/productPage'
 import { axios } from '../src/utils'
 
+const getFullName = ({ name, categoryName }) => {
+  if (categoryName !== 'Pizza') return name
+  return `${name} ${categoryName}`
+}
+
 const ProductPage = ({ product }) => {
   const {
     name,
-    description,
-    category: { name: categoryName },
-    image: { url: imageURL },
-    singlePrice,
-    price1,
-    price3,
-    price4,
-    price6
+    category: { name: categoryName }
   } = product
 
+  const fullName = getFullName({ name, categoryName })
   return (
     <Layout
-      title={`${name} ${categoryName} - Çanakkale Napoli Pizza`}
-      description={`En güzel ${name} ${categoryName}.`}>
-      <Product {...product} />
+      title={`${fullName} - Çanakkale Napoli Pizza`}
+      description={`En güzel ${fullName}.`}>
+      <Product {...product} fullName={fullName} />
     </Layout>
   )
 }
@@ -37,7 +36,6 @@ export async function getStaticProps({ params }) {
       }
     }
   } catch (error) {
-    console.log(error)
     return {
       props: {
         error: true
