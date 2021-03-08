@@ -7,7 +7,7 @@ import { useRouter } from 'next/router'
 
 const Pizzalar = ({ pizzas, popularPizzas }) => {
   const router = useRouter()
-  const { kisi: priceType } = router.query
+  const { kisi: priceType = '1' } = router.query
 
   return (
     <Layout>
@@ -20,7 +20,8 @@ const Pizzalar = ({ pizzas, popularPizzas }) => {
 
       <Container>
         <Text mb={3} fontSize='2rem' fontWeight='900'>
-          En Popüler Pizzalar
+          En Popüler Pizzalar <Box as='br' display={['unset', 'none']} />(
+          {priceType} Kişilik)
         </Text>
         <Products products={popularPizzas} priceType={priceType} />
       </Container>
@@ -29,7 +30,8 @@ const Pizzalar = ({ pizzas, popularPizzas }) => {
 
       <Container>
         <Text mb={3} fontSize='2rem' fontWeight='900'>
-          Tüm Pizzalar
+          Tüm Pizzalar <Box as='br' display={['unset', 'none']} />({priceType}{' '}
+          Kişilik)
         </Text>
         <Products id='products' products={pizzas} priceType={priceType} />
       </Container>
