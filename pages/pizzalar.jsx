@@ -20,8 +20,9 @@ const Pizzalar = ({ pizzas, popularPizzas }) => {
 
       <Container>
         <Text mb={3} fontSize='2rem' fontWeight='900'>
-          En Popüler Pizzalar <Box as='br' display={['unset', 'none']} />(
-          {priceType} Kişilik)
+          <span>En Popüler Pizzalar </span>
+          <Box as='br' display={['unset', 'none']} />
+          <span>({priceType} Kişilik)</span>
         </Text>
         <Products products={popularPizzas} priceType={priceType} />
       </Container>
@@ -30,8 +31,9 @@ const Pizzalar = ({ pizzas, popularPizzas }) => {
 
       <Container>
         <Text mb={3} fontSize='2rem' fontWeight='900'>
-          Tüm Pizzalar <Box as='br' display={['unset', 'none']} />({priceType}{' '}
-          Kişilik)
+          <span>Tüm Pizzalar </span>
+          <Box as='br' display={['unset', 'none']} />
+          <span>({priceType} Kişilik)</span>
         </Text>
         <Products id='products' products={pizzas} priceType={priceType} />
       </Container>
