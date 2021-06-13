@@ -2,19 +2,16 @@ export const propositions = [
   {
     icon: 'motorcycle',
     title: 'Hızlı ve Güvenilir',
-    text:
-      'Lorem ipsum dolor sit amet tıngır metinler ile birlikte gelen yücelik sayesinde böyle yazılar yazabiliyoruz işte arkadaşalr sizde de kolay gelsin o zaman.'
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
   },
   {
     icon: 'pizza-slice',
     title: 'Çok Lezzetli',
-    text:
-      'Lorem ipsum dolor sit amet tıngır metinler ile birlikte gelen yücelik sayesinde böyle yazılar yazabiliyoruz işte arkadaşalr sizde de kolay gelsin o zaman.'
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
   },
   {
     icon: 'price-tag',
     title: 'Uygun Fiyatlı',
-    text:
-      'Lorem ipsum dolor sit amet tıngır metinler ile birlikte gelen yücelik sayesinde böyle yazılar yazabiliyoruz işte arkadaşalr sizde de kolay gelsin o zaman.'
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
   }
 ]
